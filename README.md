@@ -9,7 +9,7 @@ One of the main reasons behind choosing the Markdown + Draw.io formats, is the c
 
 **To edit any of the files, including the diagrams, you must simply access the following link to open VSCode:**
 
-[![Blue Brain Open Platform - Main Architecture](.vscode/resources/edit_in_vscode.drawio.svg)](https://github.dev/BlueBrain/platform-docs)
+[![Edit repository with Visual Studio Code](.vscode/resources/edit_in_vscode.drawio.svg)](https://github.dev/BlueBrain/platform-docs)
 
 The repository contains a `.vscode` folder with a recommendation to enable the [Draw.io plugin for VSCode](https://www.drawio.com/blog/edit-diagrams-with-github-dev). Simply click on `Install` when prompted in the bottom-right of your screen, and from now on you will be able to edit any of the Draw.io figures inside GitHub.
 
