@@ -52,6 +52,7 @@ graph
     sqs["AWS SQS (FIFO Queue)"]
     db[(AWS RDS)]
     accountingAPI[Accounting API]
+    usageReceiverAPI[Event receiver API]
     paymentReceiverAPI[Payment receiver API]
     ledger[Ledger]
     pricing[Pricing]
@@ -83,7 +84,8 @@ graph
   virtualLabAPI[Virtual Lab API]
   costExplorerAPI[AWS Cost Explorer API]
 
-  svc -- usage events ---> sqs
+  svc -- usage events ---> usageReceiverAPI
+  usageReceiverAPI -- usage events ---> sqs
 
   longrunSvc -- pre-run cost reservation --> accountingAPI
   jobCharger -- job termination --> longrunSvc
@@ -119,6 +121,7 @@ graph
 
 
   style paymentReceiverAPI fill:#87CEEB
+  style usageReceiverAPI fill:#87CEEB
   style accountingAPI fill:#87CEEB
   style virtualLabAPI fill:#87CEEB
 ```
