@@ -53,3 +53,9 @@ Scientific data is retrieved through the '`project`' directory in Lustre FSx, wh
 In certain use-cases (e.g., eModel Fitting), Lustre FSx is omitted to optimize the overall operational costs. The simulations rely on EFS instead. The data stored on S3 is still accessible through S3-FUSE, and the data synchronizations are handled through a conventional data upload on the [Metadata and Data Service](../Nexus/).
 
 Note that the data management and knowledge graph data registration is still handled via Nexus, but orchestrated in this case from the Workflow Service.
+
+## Release and Deployment
+
+The provisioner is released as a container image that is published to docker hub at https://hub.docker.com/r/bluebrain/hpc-resource-provisioner. In order to deploy it in our infrastructure as an AWS Lambda it needs to be transferred to an ECR. This ECR, like the lambda, needs to be provisioned through terraform, and so we need a two-phase deployment: one terraform run to set up the ECR, then an action to pull the image from docker and push it to ECR, and then another terraform run to deploy the Lambda.
+
+![Diagram](resources/4_release_and_deploy.drawio.svg)
