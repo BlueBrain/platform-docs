@@ -1,3 +1,7 @@
+> [!WARNING]
+> The Blue Brain Project concluded in December 2024, so development has ceased under the BlueBrain GitHub organization.
+> Future development will take place at: https://github.com/openbraininstitute/platform-docs
+
 # **Blue Brain Open Platform** - Documents
 
 This is a work-in-progress repository containing the [Architecture Documentation](docs/) of the **Blue Brain Open Platform**, as well as the review documents for the [AWS Well-Architected Framework](waf).
